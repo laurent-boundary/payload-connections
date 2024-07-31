@@ -1,3 +1,32 @@
+# Example instructions
+
+I included the .env
+So you should be ready to just run:
+```
+docker compose up --build
+```
+ If it doesn't work you turn on manually the containers:
+ - postgres first 
+ - wait a bit
+ - payload
+
+It should work.
+
+Go to `http://localhost:3006/admin/`
+
+refresh the page.
+
+In docker desktop:
+ - go to your `postgres-1`
+ - exec tab
+ - connect: `psql -U test -d db`
+ - check connection `SELECT COUNT(*) FROM pg_stat_activity;`
+
+With this extra minimal example I can see 7 connections
+
+
+
+
 # Payload Blank Template
 
 A blank template for [Payload](https://github.com/payloadcms/payload) to help you get up and running quickly. This repo may have been created by running `npx create-payload-app@latest` and selecting the "blank" template or by cloning this template on [Payload Cloud](https://payloadcms.com/new/clone/blank).
